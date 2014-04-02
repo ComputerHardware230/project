@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="ProjectMid">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjectMid|alu:inst|16bitMux4to1:inst10|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_eoc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjectMid|alu:inst|newmux:inst1|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_boc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjectMid|registers:inst1|const1:ONE|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_ak6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjectMid|2to1_16mux:MUXB|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_boc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjectMid|3to1_16mux:MUXY|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_doc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjectMid|alu:inst|newmux:inst2|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_boc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjectMid|registers:inst1|ConstantZero:inst43|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_9k6.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

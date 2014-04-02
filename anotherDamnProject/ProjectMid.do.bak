@@ -1,0 +1,21 @@
+vsim 230project
+#the name is the same as your design file
+view wave
+
+add wave IR
+add wave Clock
+add wave Reset
+
+add wave RegD
+add wave RegS
+add wave RegT
+
+force Clock 0 0, 1 10 -repeat 20
+
+
+#Add instruction
+force IR 000000001011001100010010
+
+
+force Reset 0
+run 20

@@ -1,0 +1,38 @@
+Quartus II Archive log --	C:/Temp/230/anotherDamnProject/ProjectMid.qarlog
+
+Archive:	C:/Temp/230/anotherDamnProject/ProjectMid.qar
+Date:		Wed Apr 02 14:34:43 2014
+Quartus II		9.1 Build 350 03/24/2010 SP 2 SJ Full Version
+
+	=========== Files Selected: ===========
+C:/Temp/230/anotherDamnProject/16BitFullAdder.bdf
+C:/Temp/230/anotherDamnProject/16bitMux4to1.tdf
+C:/Temp/230/anotherDamnProject/2to1_16mux.tdf
+C:/Temp/230/anotherDamnProject/3to1_16mux.tdf
+C:/Temp/230/anotherDamnProject/4BitFullAdder.bdf
+C:/Temp/230/anotherDamnProject/Block1.bdf
+C:/Temp/230/anotherDamnProject/ConstantZero.tdf
+C:/Temp/230/anotherDamnProject/ProjectMid.bdf
+C:/Temp/230/anotherDamnProject/ProjectMid.do
+C:/Temp/230/anotherDamnProject/ProjectMid.qpf
+C:/Temp/230/anotherDamnProject/ProjectMid.qsf
+C:/Temp/230/anotherDamnProject/alu.bdf
+C:/Temp/230/anotherDamnProject/and16.vhd
+C:/Temp/230/anotherDamnProject/const1.tdf
+C:/Temp/230/anotherDamnProject/controlUnit.vhd
+C:/Temp/230/anotherDamnProject/decoder16.vhd
+C:/Temp/230/anotherDamnProject/immediate.vhd
+C:/Temp/230/anotherDamnProject/mux16.vhd
+C:/Temp/230/anotherDamnProject/newmux.tdf
+C:/Temp/230/anotherDamnProject/not16.vhd
+C:/Temp/230/anotherDamnProject/or16.vhd
+C:/Temp/230/anotherDamnProject/reg16.vhd
+C:/Temp/230/anotherDamnProject/reg24.vhd
+C:/Temp/230/anotherDamnProject/reg4.vhd
+C:/Temp/230/anotherDamnProject/registers.bdf
+C:/Temp/230/anotherDamnProject/xor16.vhd
+c:/altera/91/quartus/bin/assignment_defaults.qdf
+	======= Total: 27 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
