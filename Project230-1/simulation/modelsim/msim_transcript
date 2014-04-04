@@ -1,0 +1,647 @@
+# Reading C:/altera/91/modelsim_ase/tcl/vsim/pref.tcl 
+# do ProjectMid_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying C:\altera\91\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\91\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {ProjectMid.vho}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vital_timing
+# -- Loading package vital_primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity projectmid
+# -- Compiling architecture structure of projectmid
+# 
+# do C:/Temp/Project230/ProjectMid.do
+# vsim ProjectMid
+# vsim ProjectMid 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.projectmid(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# WARNING: No extended dataflow License exists
+#the name is the same as your design file
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# 
+# add wave -hex IR_input
+# add wave Clock
+# add wave Reset
+# 
+# add wave RA_output42
+# add wave RA_output43
+# add wave RB_output
+# add wave RM_output
+# add wave RZ_output
+# add wave RY_output
+# add wave ALU_OP
+# add wave a_inv
+# add wave b_inv
+# add wave N_output
+# add wave ZERO_output
+# add wave V_output
+# add wave C_output
+# add wave IR_output
+# add wave reg0
+# add wave reg1
+# add wave reg2
+# add wave reg3
+# add wave reg4
+# 
+# force Clock 0 0, 1 1000 -repeat 2000
+# 
+#Add instruction
+# force IR_input 0000 0000 1 011 0010 0001 0000
+# ** Error: Value length (4) does not equal array index length (24).
+# 
+# ** Error: (vsim-4011) Invalid force value: 0000 0000 1 011 0010 0001 0000.
+# Error in macro C:\Temp\Project230\ProjectMid.do line 32
+# Value length (4) does not equal array index length (24).
+# 
+# ** Error: (vsim-4011) Invalid force value: 0000 0000 1 011 0010 0001 0000.
+# 
+#     while executing
+# "force IR_input 0000 0000 1 011 0010 0001 0000"
+do ProjectMid_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {ProjectMid.vho}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vital_timing
+# -- Loading package vital_primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity projectmid
+# -- Compiling architecture structure of projectmid
+# 
+# do C:/Temp/Project230/ProjectMid.do
+# vsim ProjectMid
+# vsim ProjectMid 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.projectmid(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+#the name is the same as your design file
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# 
+# add wave -hex IR_input
+# add wave Clock
+# add wave Reset
+# 
+# add wave RA_output42
+# add wave RA_output43
+# add wave RB_output
+# add wave RM_output
+# add wave RZ_output
+# add wave RY_output
+# add wave ALU_OP
+# add wave a_inv
+# add wave b_inv
+# add wave N_output
+# add wave ZERO_output
+# add wave V_output
+# add wave C_output
+# add wave IR_output
+# add wave reg0
+# add wave reg1
+# add wave reg2
+# add wave reg3
+# add wave reg4
+# 
+# force Clock 0 0, 1 1000 -repeat 2000
+# 
+#Add instruction
+# force IR_input 000000001011001000010000
+# 
+# 
+#Sub instruction
+#force IR_input 0000 0000 1 100 0010 0000 0000
+# 
+# 
+# force Reset 0
+# run 20000
+do ProjectMid_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {ProjectMid.vho}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vital_timing
+# -- Loading package vital_primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity projectmid
+# -- Compiling architecture structure of projectmid
+# 
+# do C:/Temp/Project230/ProjectMid.do
+# vsim ProjectMid
+# vsim ProjectMid 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.projectmid(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+#the name is the same as your design file
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# 
+# add wave -hex IR_input
+# add wave Clock
+# add wave Reset
+# 
+# add wave RA_output42
+# add wave RA_output43
+# add wave RB_output
+# add wave RM_output
+# add wave RZ_output
+# add wave RY_output
+# add wave ALU_OP
+# add wave a_inv
+# add wave b_inv
+# add wave N_output
+# add wave ZERO_output
+# add wave V_output
+# add wave C_output
+# add wave IR_output
+# add wave reg0
+# add wave reg1
+# add wave reg2
+# add wave reg3
+# add wave reg4
+# 
+# force Clock 0 0, 1 1000 -repeat 2000
+# 
+#Add instruction
+#force IR_input 000000001011001000010000
+# 
+# 
+#Sub instruction
+# force IR_input 000000001100001000010000
+# 
+# 
+# force Reset 0
+# run 20000
+do ProjectMid_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {ProjectMid.vho}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vital_timing
+# -- Loading package vital_primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity projectmid
+# -- Compiling architecture structure of projectmid
+# 
+# do C:/Temp/Project230/ProjectMid.do
+# vsim ProjectMid
+# vsim ProjectMid 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.projectmid(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+#the name is the same as your design file
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# 
+# add wave -hex IR_input
+# add wave Clock
+# add wave Reset
+# 
+# add wave RA_output42
+# add wave RA_output43
+# add wave RB_output
+# add wave RM_output
+# add wave RZ_output
+# add wave RY_output
+# add wave ALU_OP
+# add wave a_inv
+# add wave b_inv
+# add wave N_output
+# add wave ZERO_output
+# add wave V_output
+# add wave C_output
+# add wave IR_output
+# add wave reg0
+# add wave reg1
+# add wave reg2
+# add wave reg3
+# add wave reg4
+# 
+# force Clock 0 0, 1 1000 -repeat 2000
+# 
+#Add instruction
+#force IR_input 000000001011001000010000
+# 
+# 
+#Sub instruction
+# force IR_input 000000001100001000000001
+# 
+# 
+# force Reset 0
+# run 20000
+do ProjectMid_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {ProjectMid.vho}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vital_timing
+# -- Loading package vital_primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity projectmid
+# -- Compiling architecture structure of projectmid
+# 
+# do C:/Temp/Project230/ProjectMid.do
+# vsim ProjectMid
+# vsim ProjectMid 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.projectmid(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+#the name is the same as your design file
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# 
+# add wave -hex IR_input
+# add wave Clock
+# add wave Reset
+# 
+# add wave RA_output42
+# add wave RA_output43
+# add wave RB_output
+# add wave RM_output
+# add wave RZ_output
+# add wave RY_output
+# add wave ALU_OP
+# add wave a_inv
+# add wave b_inv
+# add wave N_output
+# add wave ZERO_output
+# add wave V_output
+# add wave C_output
+# add wave IR_output
+# add wave reg0
+# add wave reg1
+# add wave reg2
+# add wave reg3
+# add wave reg4
+# 
+# force Clock 0 0, 1 1000 -repeat 2000
+# 
+#Add instruction
+# force IR_input 000000001011001000010000
+# 
+# 
+#Sub instruction
+#force IR_input 000000001100001000000001
+# 
+# 
+# force Reset 0
+# run 20000
+do ProjectMid_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {ProjectMid.vho}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vital_timing
+# -- Loading package vital_primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity projectmid
+# -- Compiling architecture structure of projectmid
+# 
+# do C:/Temp/Project230/ProjectMid.do
+# vsim ProjectMid
+# vsim ProjectMid 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.projectmid(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+#the name is the same as your design file
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# 
+# add wave -hex IR_input
+# add wave Clock
+# add wave Reset
+# 
+# add wave RA_output42
+# add wave RA_output43
+# add wave RB_output
+# add wave RM_output
+# add wave RZ_output
+# add wave RY_output
+# add wave ALU_OP
+# add wave a_inv
+# add wave b_inv
+# add wave N_output
+# add wave ZERO_output
+# add wave V_output
+# add wave C_output
+# add wave IR_output
+# add wave reg0
+# add wave reg1
+# add wave reg2
+# add wave reg3
+# add wave reg4
+# 
+# force Clock 0 0, 1 1000 -repeat 2000
+# 
+#Add instruction
+# force IR_input 000000001011001000010000
+# 
+# 
+#Sub instruction
+#force IR_input 000000001100001000000001
+# 
+# 
+# force Reset 0
+# run 22000
+do ProjectMid_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {ProjectMid.vho}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vital_timing
+# -- Loading package vital_primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity projectmid
+# -- Compiling architecture structure of projectmid
+# 
+# do C:/Temp/Project230/ProjectMid.do
+# vsim ProjectMid
+# vsim ProjectMid 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.projectmid(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+#the name is the same as your design file
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# 
+# add wave -hex IR_input
+# add wave Clock
+# add wave Reset
+# 
+# add wave RA_output42
+# add wave RA_output43
+# add wave RB_output
+# add wave RM_output
+# add wave RZ_output
+# add wave RY_output
+# add wave ALU_OP
+# add wave a_inv
+# add wave b_inv
+# add wave N_output
+# add wave ZERO_output
+# add wave V_output
+# add wave C_output
+# add wave IR_output
+# add wave reg0
+# add wave reg1
+# add wave reg2
+# add wave reg3
+# add wave reg4
+# 
+# force Clock 0 0, 1 1000 -repeat 2000
+# 
+#Add instruction
+# force IR_input 000000001011001000010000
+# 
+# 
+#Sub instruction
+# force IR_input 000000001100001000000001
+# 
+# 
+# force Reset 0
+# run 22000
+do ProjectMid_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {ProjectMid.vho}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vital_timing
+# -- Loading package vital_primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity projectmid
+# -- Compiling architecture structure of projectmid
+# 
+# do C:/Temp/Project230/ProjectMid.do
+# vsim ProjectMid
+# vsim ProjectMid 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.projectmid(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+#the name is the same as your design file
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# 
+# add wave -hex IR_input
+# add wave Clock
+# add wave Reset
+# 
+# add wave RA_output42
+# add wave RA_output43
+# add wave RB_output
+# add wave RM_output
+# add wave RZ_output
+# add wave RY_output
+# add wave ALU_OP
+# add wave a_inv
+# add wave b_inv
+# add wave N_output
+# add wave ZERO_output
+# add wave V_output
+# add wave C_output
+# add wave IR_output
+# add wave reg0
+# add wave reg1
+# add wave reg2
+# add wave reg3
+# add wave reg4
+# 
+# force Clock 0 0, 1 1000 -repeat 2000
+# 
+#Add instruction
+# force IR_input 000000001011001000010000 0
+# 
+# 
+#Sub instruction
+# force IR_input 000000001100001000000001 10000
+# 
+# 
+# force Reset 0
+# run 22000

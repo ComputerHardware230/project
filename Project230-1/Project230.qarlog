@@ -1,0 +1,56 @@
+Quartus II Archive log --	C:/Temp/Project230/Project230.qarlog
+
+Archive:	C:/Temp/Project230/Project230.qar
+Date:		Thu Apr 03 16:00:32 2014
+Quartus II 64-Bit		9.1 Build 350 03/24/2010 SP 2 SJ Full Version
+
+	=========== Files Selected: ===========
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/16bitfulladder.bdf
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/16bitmux4to1.tdf
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/2to1_16mux.tdf
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/3to1_16mux.tdf
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/4bitfulladder.bdf
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/ProjectMid.bdf
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/ProjectMid.do
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/ProjectMid.qpf
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/ProjectMid.qsf
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/alu.bdf
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/and16.vhd
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/block1.bdf
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/const1.tdf
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/constantzero.tdf
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/controlunit.vhd
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/decoder16.vhd
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/immediate.vhd
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/mux16.vhd
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/newmux.tdf
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/not16.vhd
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/or16.vhd
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/reg16.vhd
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/reg24.vhd
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/reg4.vhd
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/registers.bdf
+//cse-redirect/Redirect/dnelson/Desktop/anotherDamnProject/anotherDamnProject/xor16.vhd
+c:/altera/91/quartus/bin64/assignment_defaults.qdf
+	======= Total: 27 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Thu Apr 03 16:01:13 2014
+Source archive file:	C:/Temp/Project230/Project230.qar
+Archive was extracted into	C:/Temp/Project230/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Thu Apr 03 16:34:23 2014
+Source archive file:	Z:/CSCE 230/Project230/Project230.qar
+Archive was extracted into	Z:/CSCE 230/Project230/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Thu Apr 03 16:42:22 2014
+Source archive file:	Z:/CSCE 230/Project230/Project230.qar
+Archive was extracted into	Z:/CSCE 230/Project230/
+		 - successfully.

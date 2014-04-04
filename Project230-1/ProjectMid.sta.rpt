@@ -1,0 +1,1543 @@
+TimeQuest Timing Analyzer report for ProjectMid
+Thu Apr 03 16:55:56 2014
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'Clock'
+ 12. Slow Model Hold: 'Clock'
+ 13. Slow Model Minimum Pulse Width: 'Clock'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'Clock'
+ 24. Fast Model Hold: 'Clock'
+ 25. Fast Model Minimum Pulse Width: 'Clock'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                     ;
++--------------------+------------------------------------------------------------------+
+; Quartus II Version ; Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version ;
+; Revision Name      ; ProjectMid                                                       ;
+; Device Family      ; Cyclone II                                                       ;
+; Device Name        ; EP2C20F484C7                                                     ;
+; Timing Models      ; Final                                                            ;
+; Delay Model        ; Combined                                                         ;
+; Rise/Fall Delays   ; Unavailable                                                      ;
++--------------------+------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ; < 0.1%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++------------------------------------------------+
+; Slow Model Fmax Summary                        ;
++----------+-----------------+------------+------+
+; Fmax     ; Restricted Fmax ; Clock Name ; Note ;
++----------+-----------------+------------+------+
+; 6.25 MHz ; 6.25 MHz        ; Clock      ;      ;
++----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------+
+; Slow Model Setup Summary         ;
++-------+----------+---------------+
+; Clock ; Slack    ; End Point TNS ;
++-------+----------+---------------+
+; Clock ; -159.060 ; -5556.610     ;
++-------+----------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; Clock ; 0.445 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; Clock ; -1.631 ; -74.951               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Clock'                                                                                                                  ;
++----------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack    ; From Node                   ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++----------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; -159.060 ; controlUnit:inst2|stage[0]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 160.098    ;
+; -159.060 ; controlUnit:inst2|stage[0]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 160.098    ;
+; -159.014 ; controlUnit:inst2|stage[31] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 160.055    ;
+; -159.014 ; controlUnit:inst2|stage[31] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 160.055    ;
+; -158.763 ; controlUnit:inst2|stage[2]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 159.801    ;
+; -158.763 ; controlUnit:inst2|stage[2]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 159.801    ;
+; -158.607 ; controlUnit:inst2|stage[1]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 159.645    ;
+; -158.607 ; controlUnit:inst2|stage[1]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 159.645    ;
+; -158.422 ; controlUnit:inst2|stage[3]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 159.460    ;
+; -158.422 ; controlUnit:inst2|stage[3]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 159.460    ;
+; -158.290 ; controlUnit:inst2|stage[0]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 159.328    ;
+; -158.244 ; controlUnit:inst2|stage[31] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.003      ; 159.285    ;
+; -158.181 ; controlUnit:inst2|stage[5]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 159.219    ;
+; -158.181 ; controlUnit:inst2|stage[5]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 159.219    ;
+; -158.124 ; controlUnit:inst2|stage[4]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 159.162    ;
+; -158.124 ; controlUnit:inst2|stage[4]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 159.162    ;
+; -157.993 ; controlUnit:inst2|stage[2]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 159.031    ;
+; -157.960 ; controlUnit:inst2|stage[6]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.998    ;
+; -157.960 ; controlUnit:inst2|stage[6]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.998    ;
+; -157.893 ; controlUnit:inst2|stage[7]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.931    ;
+; -157.893 ; controlUnit:inst2|stage[7]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.931    ;
+; -157.837 ; controlUnit:inst2|stage[1]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.875    ;
+; -157.720 ; controlUnit:inst2|stage[9]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.758    ;
+; -157.720 ; controlUnit:inst2|stage[9]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.758    ;
+; -157.652 ; controlUnit:inst2|stage[3]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.690    ;
+; -157.648 ; controlUnit:inst2|stage[10] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.686    ;
+; -157.648 ; controlUnit:inst2|stage[10] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.686    ;
+; -157.646 ; controlUnit:inst2|stage[8]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.684    ;
+; -157.646 ; controlUnit:inst2|stage[8]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.684    ;
+; -157.563 ; controlUnit:inst2|stage[15] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.601    ;
+; -157.563 ; controlUnit:inst2|stage[15] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.601    ;
+; -157.515 ; controlUnit:inst2|stage[0]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.553    ;
+; -157.469 ; controlUnit:inst2|stage[31] ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.003      ; 158.510    ;
+; -157.463 ; controlUnit:inst2|stage[14] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.501    ;
+; -157.463 ; controlUnit:inst2|stage[14] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.501    ;
+; -157.455 ; controlUnit:inst2|stage[13] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.493    ;
+; -157.455 ; controlUnit:inst2|stage[13] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.493    ;
+; -157.412 ; controlUnit:inst2|stage[11] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.450    ;
+; -157.412 ; controlUnit:inst2|stage[11] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.450    ;
+; -157.411 ; controlUnit:inst2|stage[5]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.449    ;
+; -157.383 ; controlUnit:inst2|stage[12] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.421    ;
+; -157.383 ; controlUnit:inst2|stage[12] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.421    ;
+; -157.354 ; controlUnit:inst2|stage[4]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.392    ;
+; -157.218 ; controlUnit:inst2|stage[2]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.256    ;
+; -157.190 ; controlUnit:inst2|stage[6]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.228    ;
+; -157.123 ; controlUnit:inst2|stage[7]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.161    ;
+; -157.088 ; controlUnit:inst2|stage[16] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 158.129    ;
+; -157.088 ; controlUnit:inst2|stage[16] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 158.129    ;
+; -157.062 ; controlUnit:inst2|stage[1]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 158.100    ;
+; -156.969 ; controlUnit:inst2|stage[21] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 158.010    ;
+; -156.969 ; controlUnit:inst2|stage[21] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 158.010    ;
+; -156.950 ; controlUnit:inst2|stage[9]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.988    ;
+; -156.878 ; controlUnit:inst2|stage[10] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.916    ;
+; -156.877 ; controlUnit:inst2|stage[3]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.915    ;
+; -156.876 ; controlUnit:inst2|stage[8]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.914    ;
+; -156.864 ; controlUnit:inst2|stage[17] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.905    ;
+; -156.864 ; controlUnit:inst2|stage[17] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.905    ;
+; -156.824 ; controlUnit:inst2|stage[19] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.865    ;
+; -156.824 ; controlUnit:inst2|stage[19] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.865    ;
+; -156.793 ; controlUnit:inst2|stage[15] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.831    ;
+; -156.784 ; controlUnit:inst2|stage[18] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.825    ;
+; -156.784 ; controlUnit:inst2|stage[18] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.825    ;
+; -156.693 ; controlUnit:inst2|stage[14] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.731    ;
+; -156.685 ; controlUnit:inst2|stage[13] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.723    ;
+; -156.658 ; controlUnit:inst2|stage[20] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.699    ;
+; -156.658 ; controlUnit:inst2|stage[20] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.699    ;
+; -156.642 ; controlUnit:inst2|stage[11] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.680    ;
+; -156.636 ; controlUnit:inst2|stage[5]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.674    ;
+; -156.613 ; controlUnit:inst2|stage[12] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.651    ;
+; -156.579 ; controlUnit:inst2|stage[4]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.617    ;
+; -156.517 ; controlUnit:inst2|stage[26] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.558    ;
+; -156.517 ; controlUnit:inst2|stage[26] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.558    ;
+; -156.471 ; controlUnit:inst2|stage[22] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.512    ;
+; -156.471 ; controlUnit:inst2|stage[22] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.512    ;
+; -156.415 ; controlUnit:inst2|stage[6]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.453    ;
+; -156.389 ; controlUnit:inst2|stage[23] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.430    ;
+; -156.389 ; controlUnit:inst2|stage[23] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.430    ;
+; -156.348 ; controlUnit:inst2|stage[7]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.386    ;
+; -156.318 ; controlUnit:inst2|stage[16] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.359    ;
+; -156.312 ; controlUnit:inst2|stage[25] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.353    ;
+; -156.312 ; controlUnit:inst2|stage[25] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.353    ;
+; -156.215 ; controlUnit:inst2|stage[24] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.256    ;
+; -156.215 ; controlUnit:inst2|stage[24] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.256    ;
+; -156.199 ; controlUnit:inst2|stage[21] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.240    ;
+; -156.175 ; controlUnit:inst2|stage[9]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.213    ;
+; -156.124 ; controlUnit:inst2|stage[29] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.165    ;
+; -156.124 ; controlUnit:inst2|stage[29] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.165    ;
+; -156.103 ; controlUnit:inst2|stage[10] ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.141    ;
+; -156.101 ; controlUnit:inst2|stage[8]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.139    ;
+; -156.094 ; controlUnit:inst2|stage[17] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.135    ;
+; -156.054 ; controlUnit:inst2|stage[19] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.095    ;
+; -156.018 ; controlUnit:inst2|stage[15] ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 157.056    ;
+; -156.014 ; controlUnit:inst2|stage[18] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.003      ; 157.055    ;
+; -155.937 ; controlUnit:inst2|stage[27] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 156.978    ;
+; -155.937 ; controlUnit:inst2|stage[27] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 156.978    ;
+; -155.918 ; controlUnit:inst2|stage[14] ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 156.956    ;
+; -155.910 ; controlUnit:inst2|stage[13] ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 156.948    ;
+; -155.908 ; controlUnit:inst2|stage[28] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 156.949    ;
+; -155.908 ; controlUnit:inst2|stage[28] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 156.949    ;
+; -155.888 ; controlUnit:inst2|stage[20] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.003      ; 156.929    ;
++----------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Clock'                                                                                                                                    ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; controlUnit:inst2|b_inv               ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; controlUnit:inst2|ir_enable           ; controlUnit:inst2|ir_enable           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[12] ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[13] ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[14] ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[22] ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[23] ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[21] ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[20] ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[19] ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[18] ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[17] ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[16] ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[15] ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[11] ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[10] ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[9]  ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.636 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[8]  ; Clock        ; Clock       ; 0.000        ; -0.006     ; 1.916      ;
+; 1.769 ; Reg24:Instruction_Register|output[14] ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.006      ; 2.061      ;
+; 1.770 ; Reg24:Instruction_Register|output[13] ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.006      ; 2.062      ;
+; 1.956 ; Reg24:Instruction_Register|output[12] ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.006      ; 2.248      ;
+; 1.957 ; Reg24:Instruction_Register|output[14] ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.006      ; 2.249      ;
+; 1.968 ; Reg24:Instruction_Register|output[14] ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.006      ; 2.260      ;
+; 2.221 ; Reg24:Instruction_Register|output[21] ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.006      ; 2.513      ;
+; 2.254 ; Reg24:Instruction_Register|output[12] ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.006      ; 2.546      ;
+; 2.308 ; Reg24:Instruction_Register|output[13] ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.006      ; 2.600      ;
+; 2.401 ; Reg24:Instruction_Register|output[20] ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.006      ; 2.693      ;
+; 2.673 ; Reg24:Instruction_Register|output[23] ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.006      ; 2.965      ;
+; 2.705 ; Reg24:Instruction_Register|output[22] ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.006      ; 2.997      ;
+; 2.737 ; Reg24:Instruction_Register|output[12] ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.006      ; 3.029      ;
+; 2.878 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[7]  ; Clock        ; Clock       ; 0.000        ; -0.030     ; 3.134      ;
+; 2.878 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[6]  ; Clock        ; Clock       ; 0.000        ; -0.030     ; 3.134      ;
+; 2.878 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[5]  ; Clock        ; Clock       ; 0.000        ; -0.030     ; 3.134      ;
+; 2.878 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[4]  ; Clock        ; Clock       ; 0.000        ; -0.030     ; 3.134      ;
+; 2.878 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[3]  ; Clock        ; Clock       ; 0.000        ; -0.030     ; 3.134      ;
+; 2.878 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[2]  ; Clock        ; Clock       ; 0.000        ; -0.030     ; 3.134      ;
+; 2.878 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[1]  ; Clock        ; Clock       ; 0.000        ; -0.030     ; 3.134      ;
+; 2.878 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[0]  ; Clock        ; Clock       ; 0.000        ; -0.030     ; 3.134      ;
+; 3.141 ; Reg24:Instruction_Register|output[21] ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.006      ; 3.433      ;
+; 3.141 ; Reg24:Instruction_Register|output[21] ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.006      ; 3.433      ;
+; 3.236 ; Reg24:Instruction_Register|output[13] ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.006      ; 3.528      ;
+; 3.321 ; Reg24:Instruction_Register|output[20] ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.006      ; 3.613      ;
+; 3.321 ; Reg24:Instruction_Register|output[20] ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.006      ; 3.613      ;
+; 3.593 ; Reg24:Instruction_Register|output[23] ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.006      ; 3.885      ;
+; 3.593 ; Reg24:Instruction_Register|output[23] ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.006      ; 3.885      ;
+; 3.625 ; Reg24:Instruction_Register|output[22] ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.006      ; 3.917      ;
+; 3.625 ; Reg24:Instruction_Register|output[22] ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.006      ; 3.917      ;
+; 4.117 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[2]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 4.406      ;
+; 4.157 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[0]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 4.446      ;
+; 4.547 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[3]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 4.836      ;
+; 4.587 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[1]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 4.876      ;
+; 4.629 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[4]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 4.918      ;
+; 4.709 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[5]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 4.998      ;
+; 4.789 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[6]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 5.078      ;
+; 4.856 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[7]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 5.145      ;
+; 5.040 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[8]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 5.329      ;
+; 5.048 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 5.337      ;
+; 5.048 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 5.337      ;
+; 5.123 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[9]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 5.412      ;
+; 5.203 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[10]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 5.492      ;
+; 5.283 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[11]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 5.572      ;
+; 5.286 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|ir_enable           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 5.575      ;
+; 5.363 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[12]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 5.652      ;
+; 5.367 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[0]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 5.653      ;
+; 5.443 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[13]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 5.732      ;
+; 5.520 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.003      ; 5.809      ;
+; 5.523 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[14]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 5.812      ;
+; 5.584 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[15]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 5.873      ;
+; 5.767 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[16]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.053      ;
+; 5.797 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[1]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.083      ;
+; 5.839 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[2]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.125      ;
+; 5.847 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[17]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.133      ;
+; 5.918 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[3]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.204      ;
+; 5.926 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[18]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.212      ;
+; 6.005 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[19]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.291      ;
+; 6.037 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[4]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.323      ;
+; 6.087 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[20]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.373      ;
+; 6.117 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[5]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.403      ;
+; 6.167 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[21]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.453      ;
+; 6.197 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[6]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.483      ;
+; 6.227 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[7]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.513      ;
+; 6.247 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[22]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.533      ;
+; 6.258 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.544      ;
+; 6.258 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.544      ;
+; 6.314 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[23]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.600      ;
+; 6.411 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[8]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.697      ;
+; 6.496 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|ir_enable           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.782      ;
+; 6.498 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[24]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.784      ;
+; 6.507 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[9]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.793      ;
+; 6.545 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[29]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.831      ;
+; 6.581 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[25]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.867      ;
+; 6.611 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[10]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.897      ;
+; 6.661 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[26]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.947      ;
+; 6.661 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[11]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 6.947      ;
+; 6.714 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[28]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 7.000      ;
+; 6.730 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.000      ; 7.016      ;
+; 6.741 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[27]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 7.027      ;
+; 6.749 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[12]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 7.035      ;
+; 6.829 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[13]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 7.115      ;
+; 6.902 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[14]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 7.188      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Clock'                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; Clock ; Rise       ; Clock                                 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[10] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[10] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[11] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[11] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[12] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[12] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[13] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[13] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[14] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[14] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[15] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[15] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[16] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[16] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[17] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[17] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[18] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[18] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[19] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[19] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[20] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[20] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[21] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[21] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[22] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[22] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[23] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[23] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[4]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[4]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[5]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[5]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[6]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[6]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[7]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[7]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[8]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[8]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[9]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[9]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|alu_op[0]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|alu_op[0]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|alu_op[1]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|alu_op[1]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|b_inv               ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|b_inv               ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|ir_enable           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|ir_enable           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[0]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[0]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[10]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[10]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[11]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[11]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[12]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[12]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[13]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[13]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[14]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[14]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[15]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[15]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[16]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[16]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[17]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[17]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[18]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[18]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[19]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[19]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[1]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[1]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[20]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[20]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[21]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[21]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[22]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[22]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[23]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[23]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[24]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[24]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[25]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[25]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[26]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[26]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[27]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[27]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[28]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[28]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[29]           ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Setup Times                                                                   ;
++---------------+------------+---------+---------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise    ; Fall    ; Clock Edge ; Clock Reference ;
++---------------+------------+---------+---------+------------+-----------------+
+; IR_input[*]   ; Clock      ; 4.867   ; 4.867   ; Rise       ; Clock           ;
+;  IR_input[0]  ; Clock      ; 4.389   ; 4.389   ; Rise       ; Clock           ;
+;  IR_input[1]  ; Clock      ; 4.667   ; 4.667   ; Rise       ; Clock           ;
+;  IR_input[2]  ; Clock      ; 4.596   ; 4.596   ; Rise       ; Clock           ;
+;  IR_input[3]  ; Clock      ; 4.672   ; 4.672   ; Rise       ; Clock           ;
+;  IR_input[4]  ; Clock      ; 4.262   ; 4.262   ; Rise       ; Clock           ;
+;  IR_input[5]  ; Clock      ; 3.790   ; 3.790   ; Rise       ; Clock           ;
+;  IR_input[6]  ; Clock      ; 4.120   ; 4.120   ; Rise       ; Clock           ;
+;  IR_input[7]  ; Clock      ; 4.304   ; 4.304   ; Rise       ; Clock           ;
+;  IR_input[8]  ; Clock      ; 4.129   ; 4.129   ; Rise       ; Clock           ;
+;  IR_input[9]  ; Clock      ; 3.893   ; 3.893   ; Rise       ; Clock           ;
+;  IR_input[10] ; Clock      ; 4.867   ; 4.867   ; Rise       ; Clock           ;
+;  IR_input[11] ; Clock      ; 3.900   ; 3.900   ; Rise       ; Clock           ;
+;  IR_input[12] ; Clock      ; 4.531   ; 4.531   ; Rise       ; Clock           ;
+;  IR_input[13] ; Clock      ; 4.165   ; 4.165   ; Rise       ; Clock           ;
+;  IR_input[14] ; Clock      ; 4.538   ; 4.538   ; Rise       ; Clock           ;
+;  IR_input[15] ; Clock      ; 4.344   ; 4.344   ; Rise       ; Clock           ;
+;  IR_input[16] ; Clock      ; 4.309   ; 4.309   ; Rise       ; Clock           ;
+;  IR_input[17] ; Clock      ; 4.209   ; 4.209   ; Rise       ; Clock           ;
+;  IR_input[18] ; Clock      ; 4.125   ; 4.125   ; Rise       ; Clock           ;
+;  IR_input[19] ; Clock      ; 3.946   ; 3.946   ; Rise       ; Clock           ;
+;  IR_input[20] ; Clock      ; 4.007   ; 4.007   ; Rise       ; Clock           ;
+;  IR_input[21] ; Clock      ; 4.458   ; 4.458   ; Rise       ; Clock           ;
+;  IR_input[22] ; Clock      ; 3.947   ; 3.947   ; Rise       ; Clock           ;
+;  IR_input[23] ; Clock      ; 3.983   ; 3.983   ; Rise       ; Clock           ;
+; Reset         ; Clock      ; 159.285 ; 159.285 ; Rise       ; Clock           ;
++---------------+------------+---------+---------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; IR_input[*]   ; Clock      ; -3.542 ; -3.542 ; Rise       ; Clock           ;
+;  IR_input[0]  ; Clock      ; -4.141 ; -4.141 ; Rise       ; Clock           ;
+;  IR_input[1]  ; Clock      ; -4.419 ; -4.419 ; Rise       ; Clock           ;
+;  IR_input[2]  ; Clock      ; -4.348 ; -4.348 ; Rise       ; Clock           ;
+;  IR_input[3]  ; Clock      ; -4.424 ; -4.424 ; Rise       ; Clock           ;
+;  IR_input[4]  ; Clock      ; -4.014 ; -4.014 ; Rise       ; Clock           ;
+;  IR_input[5]  ; Clock      ; -3.542 ; -3.542 ; Rise       ; Clock           ;
+;  IR_input[6]  ; Clock      ; -3.872 ; -3.872 ; Rise       ; Clock           ;
+;  IR_input[7]  ; Clock      ; -4.056 ; -4.056 ; Rise       ; Clock           ;
+;  IR_input[8]  ; Clock      ; -3.881 ; -3.881 ; Rise       ; Clock           ;
+;  IR_input[9]  ; Clock      ; -3.645 ; -3.645 ; Rise       ; Clock           ;
+;  IR_input[10] ; Clock      ; -4.619 ; -4.619 ; Rise       ; Clock           ;
+;  IR_input[11] ; Clock      ; -3.652 ; -3.652 ; Rise       ; Clock           ;
+;  IR_input[12] ; Clock      ; -4.283 ; -4.283 ; Rise       ; Clock           ;
+;  IR_input[13] ; Clock      ; -3.917 ; -3.917 ; Rise       ; Clock           ;
+;  IR_input[14] ; Clock      ; -4.290 ; -4.290 ; Rise       ; Clock           ;
+;  IR_input[15] ; Clock      ; -4.096 ; -4.096 ; Rise       ; Clock           ;
+;  IR_input[16] ; Clock      ; -4.061 ; -4.061 ; Rise       ; Clock           ;
+;  IR_input[17] ; Clock      ; -3.961 ; -3.961 ; Rise       ; Clock           ;
+;  IR_input[18] ; Clock      ; -3.877 ; -3.877 ; Rise       ; Clock           ;
+;  IR_input[19] ; Clock      ; -3.698 ; -3.698 ; Rise       ; Clock           ;
+;  IR_input[20] ; Clock      ; -3.759 ; -3.759 ; Rise       ; Clock           ;
+;  IR_input[21] ; Clock      ; -4.210 ; -4.210 ; Rise       ; Clock           ;
+;  IR_input[22] ; Clock      ; -3.699 ; -3.699 ; Rise       ; Clock           ;
+;  IR_input[23] ; Clock      ; -3.735 ; -3.735 ; Rise       ; Clock           ;
+; Reset         ; Clock      ; -3.378 ; -3.378 ; Rise       ; Clock           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; ALU_OP[*]       ; Clock      ; 8.938 ; 8.938 ; Rise       ; Clock           ;
+;  ALU_OP[0]      ; Clock      ; 7.996 ; 7.996 ; Rise       ; Clock           ;
+;  ALU_OP[1]      ; Clock      ; 8.938 ; 8.938 ; Rise       ; Clock           ;
+; IR_output[*]    ; Clock      ; 8.924 ; 8.924 ; Rise       ; Clock           ;
+;  IR_output[0]   ; Clock      ; 7.663 ; 7.663 ; Rise       ; Clock           ;
+;  IR_output[1]   ; Clock      ; 8.670 ; 8.670 ; Rise       ; Clock           ;
+;  IR_output[2]   ; Clock      ; 7.968 ; 7.968 ; Rise       ; Clock           ;
+;  IR_output[3]   ; Clock      ; 7.383 ; 7.383 ; Rise       ; Clock           ;
+;  IR_output[4]   ; Clock      ; 7.636 ; 7.636 ; Rise       ; Clock           ;
+;  IR_output[5]   ; Clock      ; 7.575 ; 7.575 ; Rise       ; Clock           ;
+;  IR_output[6]   ; Clock      ; 7.615 ; 7.615 ; Rise       ; Clock           ;
+;  IR_output[7]   ; Clock      ; 7.562 ; 7.562 ; Rise       ; Clock           ;
+;  IR_output[8]   ; Clock      ; 7.948 ; 7.948 ; Rise       ; Clock           ;
+;  IR_output[9]   ; Clock      ; 8.229 ; 8.229 ; Rise       ; Clock           ;
+;  IR_output[10]  ; Clock      ; 7.957 ; 7.957 ; Rise       ; Clock           ;
+;  IR_output[11]  ; Clock      ; 7.960 ; 7.960 ; Rise       ; Clock           ;
+;  IR_output[12]  ; Clock      ; 7.952 ; 7.952 ; Rise       ; Clock           ;
+;  IR_output[13]  ; Clock      ; 8.405 ; 8.405 ; Rise       ; Clock           ;
+;  IR_output[14]  ; Clock      ; 8.924 ; 8.924 ; Rise       ; Clock           ;
+;  IR_output[15]  ; Clock      ; 8.229 ; 8.229 ; Rise       ; Clock           ;
+;  IR_output[16]  ; Clock      ; 8.508 ; 8.508 ; Rise       ; Clock           ;
+;  IR_output[17]  ; Clock      ; 8.037 ; 8.037 ; Rise       ; Clock           ;
+;  IR_output[18]  ; Clock      ; 8.348 ; 8.348 ; Rise       ; Clock           ;
+;  IR_output[19]  ; Clock      ; 7.351 ; 7.351 ; Rise       ; Clock           ;
+;  IR_output[20]  ; Clock      ; 8.293 ; 8.293 ; Rise       ; Clock           ;
+;  IR_output[21]  ; Clock      ; 8.038 ; 8.038 ; Rise       ; Clock           ;
+;  IR_output[22]  ; Clock      ; 8.384 ; 8.384 ; Rise       ; Clock           ;
+;  IR_output[23]  ; Clock      ; 8.169 ; 8.169 ; Rise       ; Clock           ;
+; N_output        ; Clock      ; 9.175 ; 9.175 ; Rise       ; Clock           ;
+; RA_output43[*]  ; Clock      ; 8.392 ; 8.392 ; Rise       ; Clock           ;
+;  RA_output43[0] ; Clock      ; 8.392 ; 8.392 ; Rise       ; Clock           ;
+; ZERO_output     ; Clock      ; 9.155 ; 9.155 ; Rise       ; Clock           ;
+; b_inv           ; Clock      ; 8.603 ; 8.603 ; Rise       ; Clock           ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; ALU_OP[*]       ; Clock      ; 7.996 ; 7.996 ; Rise       ; Clock           ;
+;  ALU_OP[0]      ; Clock      ; 7.996 ; 7.996 ; Rise       ; Clock           ;
+;  ALU_OP[1]      ; Clock      ; 8.938 ; 8.938 ; Rise       ; Clock           ;
+; IR_output[*]    ; Clock      ; 7.351 ; 7.351 ; Rise       ; Clock           ;
+;  IR_output[0]   ; Clock      ; 7.663 ; 7.663 ; Rise       ; Clock           ;
+;  IR_output[1]   ; Clock      ; 8.670 ; 8.670 ; Rise       ; Clock           ;
+;  IR_output[2]   ; Clock      ; 7.968 ; 7.968 ; Rise       ; Clock           ;
+;  IR_output[3]   ; Clock      ; 7.383 ; 7.383 ; Rise       ; Clock           ;
+;  IR_output[4]   ; Clock      ; 7.636 ; 7.636 ; Rise       ; Clock           ;
+;  IR_output[5]   ; Clock      ; 7.575 ; 7.575 ; Rise       ; Clock           ;
+;  IR_output[6]   ; Clock      ; 7.615 ; 7.615 ; Rise       ; Clock           ;
+;  IR_output[7]   ; Clock      ; 7.562 ; 7.562 ; Rise       ; Clock           ;
+;  IR_output[8]   ; Clock      ; 7.948 ; 7.948 ; Rise       ; Clock           ;
+;  IR_output[9]   ; Clock      ; 8.229 ; 8.229 ; Rise       ; Clock           ;
+;  IR_output[10]  ; Clock      ; 7.957 ; 7.957 ; Rise       ; Clock           ;
+;  IR_output[11]  ; Clock      ; 7.960 ; 7.960 ; Rise       ; Clock           ;
+;  IR_output[12]  ; Clock      ; 7.952 ; 7.952 ; Rise       ; Clock           ;
+;  IR_output[13]  ; Clock      ; 8.405 ; 8.405 ; Rise       ; Clock           ;
+;  IR_output[14]  ; Clock      ; 8.924 ; 8.924 ; Rise       ; Clock           ;
+;  IR_output[15]  ; Clock      ; 8.229 ; 8.229 ; Rise       ; Clock           ;
+;  IR_output[16]  ; Clock      ; 8.508 ; 8.508 ; Rise       ; Clock           ;
+;  IR_output[17]  ; Clock      ; 8.037 ; 8.037 ; Rise       ; Clock           ;
+;  IR_output[18]  ; Clock      ; 8.348 ; 8.348 ; Rise       ; Clock           ;
+;  IR_output[19]  ; Clock      ; 7.351 ; 7.351 ; Rise       ; Clock           ;
+;  IR_output[20]  ; Clock      ; 8.293 ; 8.293 ; Rise       ; Clock           ;
+;  IR_output[21]  ; Clock      ; 8.038 ; 8.038 ; Rise       ; Clock           ;
+;  IR_output[22]  ; Clock      ; 8.384 ; 8.384 ; Rise       ; Clock           ;
+;  IR_output[23]  ; Clock      ; 8.169 ; 8.169 ; Rise       ; Clock           ;
+; N_output        ; Clock      ; 9.175 ; 9.175 ; Rise       ; Clock           ;
+; RA_output43[*]  ; Clock      ; 7.674 ; 7.674 ; Rise       ; Clock           ;
+;  RA_output43[0] ; Clock      ; 7.674 ; 7.674 ; Rise       ; Clock           ;
+; ZERO_output     ; Clock      ; 9.155 ; 9.155 ; Rise       ; Clock           ;
+; b_inv           ; Clock      ; 8.603 ; 8.603 ; Rise       ; Clock           ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; Clock ; -61.626 ; -2142.873     ;
++-------+---------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; Clock ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; Clock ; -1.380 ; -61.380               ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Clock'                                                                                                                 ;
++---------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                   ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; -61.626 ; controlUnit:inst2|stage[31] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 62.661     ;
+; -61.626 ; controlUnit:inst2|stage[31] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 62.661     ;
+; -61.597 ; controlUnit:inst2|stage[0]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.629     ;
+; -61.597 ; controlUnit:inst2|stage[0]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.629     ;
+; -61.494 ; controlUnit:inst2|stage[2]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.526     ;
+; -61.494 ; controlUnit:inst2|stage[2]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.526     ;
+; -61.421 ; controlUnit:inst2|stage[1]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.453     ;
+; -61.421 ; controlUnit:inst2|stage[1]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.453     ;
+; -61.337 ; controlUnit:inst2|stage[3]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.369     ;
+; -61.337 ; controlUnit:inst2|stage[3]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.369     ;
+; -61.276 ; controlUnit:inst2|stage[31] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.003      ; 62.311     ;
+; -61.263 ; controlUnit:inst2|stage[5]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.295     ;
+; -61.263 ; controlUnit:inst2|stage[5]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.295     ;
+; -61.247 ; controlUnit:inst2|stage[0]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.279     ;
+; -61.223 ; controlUnit:inst2|stage[4]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.255     ;
+; -61.223 ; controlUnit:inst2|stage[4]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.255     ;
+; -61.150 ; controlUnit:inst2|stage[6]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.182     ;
+; -61.150 ; controlUnit:inst2|stage[6]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.182     ;
+; -61.144 ; controlUnit:inst2|stage[2]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.176     ;
+; -61.114 ; controlUnit:inst2|stage[7]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.146     ;
+; -61.114 ; controlUnit:inst2|stage[7]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.146     ;
+; -61.071 ; controlUnit:inst2|stage[1]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.103     ;
+; -61.044 ; controlUnit:inst2|stage[9]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.076     ;
+; -61.044 ; controlUnit:inst2|stage[9]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.076     ;
+; -61.012 ; controlUnit:inst2|stage[10] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.044     ;
+; -61.012 ; controlUnit:inst2|stage[10] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.044     ;
+; -61.011 ; controlUnit:inst2|stage[8]  ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.043     ;
+; -61.011 ; controlUnit:inst2|stage[8]  ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.043     ;
+; -60.987 ; controlUnit:inst2|stage[3]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.019     ;
+; -60.981 ; controlUnit:inst2|stage[31] ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.003      ; 62.016     ;
+; -60.974 ; controlUnit:inst2|stage[15] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.006     ;
+; -60.974 ; controlUnit:inst2|stage[15] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 62.006     ;
+; -60.952 ; controlUnit:inst2|stage[0]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.984     ;
+; -60.933 ; controlUnit:inst2|stage[13] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.965     ;
+; -60.933 ; controlUnit:inst2|stage[13] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.965     ;
+; -60.913 ; controlUnit:inst2|stage[5]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.945     ;
+; -60.898 ; controlUnit:inst2|stage[14] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.930     ;
+; -60.898 ; controlUnit:inst2|stage[14] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.930     ;
+; -60.897 ; controlUnit:inst2|stage[11] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.929     ;
+; -60.897 ; controlUnit:inst2|stage[11] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.929     ;
+; -60.889 ; controlUnit:inst2|stage[12] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.921     ;
+; -60.889 ; controlUnit:inst2|stage[12] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.921     ;
+; -60.873 ; controlUnit:inst2|stage[4]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.905     ;
+; -60.849 ; controlUnit:inst2|stage[2]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.881     ;
+; -60.800 ; controlUnit:inst2|stage[6]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.832     ;
+; -60.776 ; controlUnit:inst2|stage[1]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.808     ;
+; -60.764 ; controlUnit:inst2|stage[7]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.796     ;
+; -60.753 ; controlUnit:inst2|stage[16] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.788     ;
+; -60.753 ; controlUnit:inst2|stage[16] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.788     ;
+; -60.694 ; controlUnit:inst2|stage[9]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.726     ;
+; -60.692 ; controlUnit:inst2|stage[3]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.724     ;
+; -60.680 ; controlUnit:inst2|stage[21] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.715     ;
+; -60.680 ; controlUnit:inst2|stage[21] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.715     ;
+; -60.662 ; controlUnit:inst2|stage[10] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.694     ;
+; -60.661 ; controlUnit:inst2|stage[8]  ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.693     ;
+; -60.641 ; controlUnit:inst2|stage[17] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.676     ;
+; -60.641 ; controlUnit:inst2|stage[17] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.676     ;
+; -60.631 ; controlUnit:inst2|stage[19] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.666     ;
+; -60.631 ; controlUnit:inst2|stage[19] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.666     ;
+; -60.624 ; controlUnit:inst2|stage[15] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.656     ;
+; -60.618 ; controlUnit:inst2|stage[5]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.650     ;
+; -60.610 ; controlUnit:inst2|stage[18] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.645     ;
+; -60.610 ; controlUnit:inst2|stage[18] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.645     ;
+; -60.583 ; controlUnit:inst2|stage[13] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.615     ;
+; -60.578 ; controlUnit:inst2|stage[4]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.610     ;
+; -60.548 ; controlUnit:inst2|stage[14] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.580     ;
+; -60.547 ; controlUnit:inst2|stage[11] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.579     ;
+; -60.544 ; controlUnit:inst2|stage[20] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.579     ;
+; -60.544 ; controlUnit:inst2|stage[20] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.579     ;
+; -60.539 ; controlUnit:inst2|stage[12] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.571     ;
+; -60.505 ; controlUnit:inst2|stage[6]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.537     ;
+; -60.469 ; controlUnit:inst2|stage[22] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.504     ;
+; -60.469 ; controlUnit:inst2|stage[22] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.504     ;
+; -60.469 ; controlUnit:inst2|stage[7]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.501     ;
+; -60.464 ; controlUnit:inst2|stage[26] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.499     ;
+; -60.464 ; controlUnit:inst2|stage[26] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.499     ;
+; -60.428 ; controlUnit:inst2|stage[23] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.463     ;
+; -60.428 ; controlUnit:inst2|stage[23] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.463     ;
+; -60.403 ; controlUnit:inst2|stage[16] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.438     ;
+; -60.399 ; controlUnit:inst2|stage[9]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.431     ;
+; -60.390 ; controlUnit:inst2|stage[25] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.425     ;
+; -60.390 ; controlUnit:inst2|stage[25] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.425     ;
+; -60.367 ; controlUnit:inst2|stage[10] ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.399     ;
+; -60.366 ; controlUnit:inst2|stage[8]  ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.398     ;
+; -60.345 ; controlUnit:inst2|stage[24] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.380     ;
+; -60.345 ; controlUnit:inst2|stage[24] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.380     ;
+; -60.330 ; controlUnit:inst2|stage[21] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.365     ;
+; -60.329 ; controlUnit:inst2|stage[15] ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.361     ;
+; -60.291 ; controlUnit:inst2|stage[17] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.326     ;
+; -60.288 ; controlUnit:inst2|stage[13] ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.320     ;
+; -60.281 ; controlUnit:inst2|stage[19] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.316     ;
+; -60.274 ; controlUnit:inst2|stage[29] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.309     ;
+; -60.274 ; controlUnit:inst2|stage[29] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.309     ;
+; -60.260 ; controlUnit:inst2|stage[18] ; controlUnit:inst2|b_inv     ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.295     ;
+; -60.253 ; controlUnit:inst2|stage[14] ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.285     ;
+; -60.252 ; controlUnit:inst2|stage[11] ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.284     ;
+; -60.244 ; controlUnit:inst2|stage[12] ; controlUnit:inst2|ir_enable ; Clock        ; Clock       ; 1.000        ; 0.000      ; 61.276     ;
+; -60.226 ; controlUnit:inst2|stage[27] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.261     ;
+; -60.226 ; controlUnit:inst2|stage[27] ; controlUnit:inst2|alu_op[0] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.261     ;
+; -60.197 ; controlUnit:inst2|stage[28] ; controlUnit:inst2|alu_op[1] ; Clock        ; Clock       ; 1.000        ; 0.003      ; 61.232     ;
++---------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Clock'                                                                                                                                    ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; controlUnit:inst2|b_inv               ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; controlUnit:inst2|ir_enable           ; controlUnit:inst2|ir_enable           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.682 ; Reg24:Instruction_Register|output[13] ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.007      ; 0.841      ;
+; 0.686 ; Reg24:Instruction_Register|output[14] ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.007      ; 0.845      ;
+; 0.712 ; Reg24:Instruction_Register|output[14] ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.007      ; 0.871      ;
+; 0.716 ; Reg24:Instruction_Register|output[12] ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.007      ; 0.875      ;
+; 0.719 ; Reg24:Instruction_Register|output[14] ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.007      ; 0.878      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[12] ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[13] ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[14] ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[22] ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[23] ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[21] ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[20] ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[19] ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[18] ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[17] ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[16] ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[15] ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[11] ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[10] ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[9]  ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.732 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[8]  ; Clock        ; Clock       ; 0.000        ; -0.007     ; 0.877      ;
+; 0.833 ; Reg24:Instruction_Register|output[13] ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.007      ; 0.992      ;
+; 0.843 ; Reg24:Instruction_Register|output[12] ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.002      ;
+; 0.855 ; Reg24:Instruction_Register|output[21] ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.014      ;
+; 0.882 ; Reg24:Instruction_Register|output[20] ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.041      ;
+; 1.001 ; Reg24:Instruction_Register|output[23] ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.160      ;
+; 1.019 ; Reg24:Instruction_Register|output[22] ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.178      ;
+; 1.122 ; Reg24:Instruction_Register|output[12] ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.281      ;
+; 1.267 ; Reg24:Instruction_Register|output[13] ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.426      ;
+; 1.278 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[7]  ; Clock        ; Clock       ; 0.000        ; -0.027     ; 1.403      ;
+; 1.278 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[6]  ; Clock        ; Clock       ; 0.000        ; -0.027     ; 1.403      ;
+; 1.278 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[5]  ; Clock        ; Clock       ; 0.000        ; -0.027     ; 1.403      ;
+; 1.278 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[4]  ; Clock        ; Clock       ; 0.000        ; -0.027     ; 1.403      ;
+; 1.278 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[3]  ; Clock        ; Clock       ; 0.000        ; -0.027     ; 1.403      ;
+; 1.278 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[2]  ; Clock        ; Clock       ; 0.000        ; -0.027     ; 1.403      ;
+; 1.278 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[1]  ; Clock        ; Clock       ; 0.000        ; -0.027     ; 1.403      ;
+; 1.278 ; controlUnit:inst2|ir_enable           ; Reg24:Instruction_Register|output[0]  ; Clock        ; Clock       ; 0.000        ; -0.027     ; 1.403      ;
+; 1.285 ; Reg24:Instruction_Register|output[21] ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.444      ;
+; 1.285 ; Reg24:Instruction_Register|output[21] ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.444      ;
+; 1.312 ; Reg24:Instruction_Register|output[20] ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.471      ;
+; 1.312 ; Reg24:Instruction_Register|output[20] ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.471      ;
+; 1.431 ; Reg24:Instruction_Register|output[23] ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.590      ;
+; 1.431 ; Reg24:Instruction_Register|output[23] ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.590      ;
+; 1.449 ; Reg24:Instruction_Register|output[22] ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.608      ;
+; 1.449 ; Reg24:Instruction_Register|output[22] ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.007      ; 1.608      ;
+; 1.544 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[2]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 1.699      ;
+; 1.553 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[0]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 1.708      ;
+; 1.682 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[3]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 1.837      ;
+; 1.693 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[1]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 1.848      ;
+; 1.717 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[4]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 1.872      ;
+; 1.752 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[5]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 1.907      ;
+; 1.787 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[6]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 1.942      ;
+; 1.822 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[7]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 1.977      ;
+; 1.876 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 2.031      ;
+; 1.876 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 2.031      ;
+; 1.916 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[8]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 2.071      ;
+; 1.951 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[9]            ; Clock        ; Clock       ; 0.000        ; 0.003      ; 2.106      ;
+; 1.955 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|ir_enable           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 2.110      ;
+; 1.986 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[10]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 2.141      ;
+; 1.986 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[0]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.138      ;
+; 2.021 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[11]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 2.176      ;
+; 2.056 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[12]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 2.211      ;
+; 2.066 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.003      ; 2.221      ;
+; 2.091 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[13]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 2.246      ;
+; 2.126 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[14]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 2.281      ;
+; 2.126 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[1]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.278      ;
+; 2.147 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[2]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.299      ;
+; 2.161 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[15]           ; Clock        ; Clock       ; 0.000        ; 0.003      ; 2.316      ;
+; 2.182 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[3]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.334      ;
+; 2.231 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[4]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.383      ;
+; 2.251 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[16]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.403      ;
+; 2.266 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[5]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.418      ;
+; 2.286 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[17]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.438      ;
+; 2.301 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[6]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.453      ;
+; 2.309 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|alu_op[0]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.461      ;
+; 2.309 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|alu_op[1]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.461      ;
+; 2.321 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[18]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.473      ;
+; 2.326 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[7]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.478      ;
+; 2.356 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[19]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.508      ;
+; 2.388 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|ir_enable           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.540      ;
+; 2.391 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[20]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.543      ;
+; 2.414 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[8]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.566      ;
+; 2.426 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[21]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.578      ;
+; 2.459 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[9]            ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.611      ;
+; 2.461 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[22]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.613      ;
+; 2.469 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[29]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.621      ;
+; 2.496 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[23]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.648      ;
+; 2.497 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[10]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.649      ;
+; 2.499 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|b_inv               ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.651      ;
+; 2.526 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[11]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.678      ;
+; 2.532 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[28]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.684      ;
+; 2.564 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[12]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.716      ;
+; 2.590 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[24]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.742      ;
+; 2.600 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[13]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.752      ;
+; 2.607 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[30]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.759      ;
+; 2.625 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[31]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.777      ;
+; 2.625 ; controlUnit:inst2|stage[31]           ; controlUnit:inst2|stage[25]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.777      ;
+; 2.631 ; controlUnit:inst2|stage[0]            ; controlUnit:inst2|stage[14]           ; Clock        ; Clock       ; 0.000        ; 0.000      ; 2.783      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Clock'                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; Clock ; Rise       ; Clock                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; Reg24:Instruction_Register|output[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; Reg24:Instruction_Register|output[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|alu_op[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|alu_op[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|alu_op[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|alu_op[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|b_inv               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|b_inv               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|ir_enable           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|ir_enable           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[11]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[11]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[12]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[12]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[13]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[13]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[14]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[14]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[15]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[15]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[16]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[16]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[17]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[17]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[18]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[18]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[19]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[19]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[20]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[20]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[21]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[21]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[22]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[22]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[23]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[23]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[24]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[24]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[25]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[25]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[26]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[26]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[27]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[27]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[28]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clock ; Rise       ; controlUnit:inst2|stage[28]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clock ; Rise       ; controlUnit:inst2|stage[29]           ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Times                                                                 ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; IR_input[*]   ; Clock      ; 2.255  ; 2.255  ; Rise       ; Clock           ;
+;  IR_input[0]  ; Clock      ; 2.036  ; 2.036  ; Rise       ; Clock           ;
+;  IR_input[1]  ; Clock      ; 2.184  ; 2.184  ; Rise       ; Clock           ;
+;  IR_input[2]  ; Clock      ; 2.138  ; 2.138  ; Rise       ; Clock           ;
+;  IR_input[3]  ; Clock      ; 2.169  ; 2.169  ; Rise       ; Clock           ;
+;  IR_input[4]  ; Clock      ; 1.923  ; 1.923  ; Rise       ; Clock           ;
+;  IR_input[5]  ; Clock      ; 1.730  ; 1.730  ; Rise       ; Clock           ;
+;  IR_input[6]  ; Clock      ; 1.906  ; 1.906  ; Rise       ; Clock           ;
+;  IR_input[7]  ; Clock      ; 1.955  ; 1.955  ; Rise       ; Clock           ;
+;  IR_input[8]  ; Clock      ; 1.933  ; 1.933  ; Rise       ; Clock           ;
+;  IR_input[9]  ; Clock      ; 1.795  ; 1.795  ; Rise       ; Clock           ;
+;  IR_input[10] ; Clock      ; 2.255  ; 2.255  ; Rise       ; Clock           ;
+;  IR_input[11] ; Clock      ; 1.808  ; 1.808  ; Rise       ; Clock           ;
+;  IR_input[12] ; Clock      ; 2.097  ; 2.097  ; Rise       ; Clock           ;
+;  IR_input[13] ; Clock      ; 1.946  ; 1.946  ; Rise       ; Clock           ;
+;  IR_input[14] ; Clock      ; 2.082  ; 2.082  ; Rise       ; Clock           ;
+;  IR_input[15] ; Clock      ; 1.975  ; 1.975  ; Rise       ; Clock           ;
+;  IR_input[16] ; Clock      ; 1.952  ; 1.952  ; Rise       ; Clock           ;
+;  IR_input[17] ; Clock      ; 1.906  ; 1.906  ; Rise       ; Clock           ;
+;  IR_input[18] ; Clock      ; 1.878  ; 1.878  ; Rise       ; Clock           ;
+;  IR_input[19] ; Clock      ; 1.825  ; 1.825  ; Rise       ; Clock           ;
+;  IR_input[20] ; Clock      ; 1.866  ; 1.866  ; Rise       ; Clock           ;
+;  IR_input[21] ; Clock      ; 2.064  ; 2.064  ; Rise       ; Clock           ;
+;  IR_input[22] ; Clock      ; 1.805  ; 1.805  ; Rise       ; Clock           ;
+;  IR_input[23] ; Clock      ; 1.856  ; 1.856  ; Rise       ; Clock           ;
+; Reset         ; Clock      ; 61.767 ; 61.767 ; Rise       ; Clock           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; IR_input[*]   ; Clock      ; -1.610 ; -1.610 ; Rise       ; Clock           ;
+;  IR_input[0]  ; Clock      ; -1.916 ; -1.916 ; Rise       ; Clock           ;
+;  IR_input[1]  ; Clock      ; -2.064 ; -2.064 ; Rise       ; Clock           ;
+;  IR_input[2]  ; Clock      ; -2.018 ; -2.018 ; Rise       ; Clock           ;
+;  IR_input[3]  ; Clock      ; -2.049 ; -2.049 ; Rise       ; Clock           ;
+;  IR_input[4]  ; Clock      ; -1.803 ; -1.803 ; Rise       ; Clock           ;
+;  IR_input[5]  ; Clock      ; -1.610 ; -1.610 ; Rise       ; Clock           ;
+;  IR_input[6]  ; Clock      ; -1.786 ; -1.786 ; Rise       ; Clock           ;
+;  IR_input[7]  ; Clock      ; -1.835 ; -1.835 ; Rise       ; Clock           ;
+;  IR_input[8]  ; Clock      ; -1.813 ; -1.813 ; Rise       ; Clock           ;
+;  IR_input[9]  ; Clock      ; -1.675 ; -1.675 ; Rise       ; Clock           ;
+;  IR_input[10] ; Clock      ; -2.135 ; -2.135 ; Rise       ; Clock           ;
+;  IR_input[11] ; Clock      ; -1.688 ; -1.688 ; Rise       ; Clock           ;
+;  IR_input[12] ; Clock      ; -1.977 ; -1.977 ; Rise       ; Clock           ;
+;  IR_input[13] ; Clock      ; -1.826 ; -1.826 ; Rise       ; Clock           ;
+;  IR_input[14] ; Clock      ; -1.962 ; -1.962 ; Rise       ; Clock           ;
+;  IR_input[15] ; Clock      ; -1.855 ; -1.855 ; Rise       ; Clock           ;
+;  IR_input[16] ; Clock      ; -1.832 ; -1.832 ; Rise       ; Clock           ;
+;  IR_input[17] ; Clock      ; -1.786 ; -1.786 ; Rise       ; Clock           ;
+;  IR_input[18] ; Clock      ; -1.758 ; -1.758 ; Rise       ; Clock           ;
+;  IR_input[19] ; Clock      ; -1.705 ; -1.705 ; Rise       ; Clock           ;
+;  IR_input[20] ; Clock      ; -1.746 ; -1.746 ; Rise       ; Clock           ;
+;  IR_input[21] ; Clock      ; -1.944 ; -1.944 ; Rise       ; Clock           ;
+;  IR_input[22] ; Clock      ; -1.685 ; -1.685 ; Rise       ; Clock           ;
+;  IR_input[23] ; Clock      ; -1.736 ; -1.736 ; Rise       ; Clock           ;
+; Reset         ; Clock      ; -0.727 ; -0.727 ; Rise       ; Clock           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; ALU_OP[*]       ; Clock      ; 4.615 ; 4.615 ; Rise       ; Clock           ;
+;  ALU_OP[0]      ; Clock      ; 4.193 ; 4.193 ; Rise       ; Clock           ;
+;  ALU_OP[1]      ; Clock      ; 4.615 ; 4.615 ; Rise       ; Clock           ;
+; IR_output[*]    ; Clock      ; 4.501 ; 4.501 ; Rise       ; Clock           ;
+;  IR_output[0]   ; Clock      ; 3.998 ; 3.998 ; Rise       ; Clock           ;
+;  IR_output[1]   ; Clock      ; 4.501 ; 4.501 ; Rise       ; Clock           ;
+;  IR_output[2]   ; Clock      ; 4.115 ; 4.115 ; Rise       ; Clock           ;
+;  IR_output[3]   ; Clock      ; 4.003 ; 4.003 ; Rise       ; Clock           ;
+;  IR_output[4]   ; Clock      ; 3.997 ; 3.997 ; Rise       ; Clock           ;
+;  IR_output[5]   ; Clock      ; 4.117 ; 4.117 ; Rise       ; Clock           ;
+;  IR_output[6]   ; Clock      ; 3.982 ; 3.982 ; Rise       ; Clock           ;
+;  IR_output[7]   ; Clock      ; 4.025 ; 4.025 ; Rise       ; Clock           ;
+;  IR_output[8]   ; Clock      ; 4.213 ; 4.213 ; Rise       ; Clock           ;
+;  IR_output[9]   ; Clock      ; 4.376 ; 4.376 ; Rise       ; Clock           ;
+;  IR_output[10]  ; Clock      ; 4.217 ; 4.217 ; Rise       ; Clock           ;
+;  IR_output[11]  ; Clock      ; 4.221 ; 4.221 ; Rise       ; Clock           ;
+;  IR_output[12]  ; Clock      ; 4.214 ; 4.214 ; Rise       ; Clock           ;
+;  IR_output[13]  ; Clock      ; 4.493 ; 4.493 ; Rise       ; Clock           ;
+;  IR_output[14]  ; Clock      ; 4.474 ; 4.474 ; Rise       ; Clock           ;
+;  IR_output[15]  ; Clock      ; 4.230 ; 4.230 ; Rise       ; Clock           ;
+;  IR_output[16]  ; Clock      ; 4.422 ; 4.422 ; Rise       ; Clock           ;
+;  IR_output[17]  ; Clock      ; 4.268 ; 4.268 ; Rise       ; Clock           ;
+;  IR_output[18]  ; Clock      ; 4.345 ; 4.345 ; Rise       ; Clock           ;
+;  IR_output[19]  ; Clock      ; 3.941 ; 3.941 ; Rise       ; Clock           ;
+;  IR_output[20]  ; Clock      ; 4.344 ; 4.344 ; Rise       ; Clock           ;
+;  IR_output[21]  ; Clock      ; 4.268 ; 4.268 ; Rise       ; Clock           ;
+;  IR_output[22]  ; Clock      ; 4.391 ; 4.391 ; Rise       ; Clock           ;
+;  IR_output[23]  ; Clock      ; 4.187 ; 4.187 ; Rise       ; Clock           ;
+; N_output        ; Clock      ; 4.694 ; 4.694 ; Rise       ; Clock           ;
+; RA_output43[*]  ; Clock      ; 4.387 ; 4.387 ; Rise       ; Clock           ;
+;  RA_output43[0] ; Clock      ; 4.387 ; 4.387 ; Rise       ; Clock           ;
+; ZERO_output     ; Clock      ; 4.674 ; 4.674 ; Rise       ; Clock           ;
+; b_inv           ; Clock      ; 4.468 ; 4.468 ; Rise       ; Clock           ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; ALU_OP[*]       ; Clock      ; 4.193 ; 4.193 ; Rise       ; Clock           ;
+;  ALU_OP[0]      ; Clock      ; 4.193 ; 4.193 ; Rise       ; Clock           ;
+;  ALU_OP[1]      ; Clock      ; 4.615 ; 4.615 ; Rise       ; Clock           ;
+; IR_output[*]    ; Clock      ; 3.941 ; 3.941 ; Rise       ; Clock           ;
+;  IR_output[0]   ; Clock      ; 3.998 ; 3.998 ; Rise       ; Clock           ;
+;  IR_output[1]   ; Clock      ; 4.501 ; 4.501 ; Rise       ; Clock           ;
+;  IR_output[2]   ; Clock      ; 4.115 ; 4.115 ; Rise       ; Clock           ;
+;  IR_output[3]   ; Clock      ; 4.003 ; 4.003 ; Rise       ; Clock           ;
+;  IR_output[4]   ; Clock      ; 3.997 ; 3.997 ; Rise       ; Clock           ;
+;  IR_output[5]   ; Clock      ; 4.117 ; 4.117 ; Rise       ; Clock           ;
+;  IR_output[6]   ; Clock      ; 3.982 ; 3.982 ; Rise       ; Clock           ;
+;  IR_output[7]   ; Clock      ; 4.025 ; 4.025 ; Rise       ; Clock           ;
+;  IR_output[8]   ; Clock      ; 4.213 ; 4.213 ; Rise       ; Clock           ;
+;  IR_output[9]   ; Clock      ; 4.376 ; 4.376 ; Rise       ; Clock           ;
+;  IR_output[10]  ; Clock      ; 4.217 ; 4.217 ; Rise       ; Clock           ;
+;  IR_output[11]  ; Clock      ; 4.221 ; 4.221 ; Rise       ; Clock           ;
+;  IR_output[12]  ; Clock      ; 4.214 ; 4.214 ; Rise       ; Clock           ;
+;  IR_output[13]  ; Clock      ; 4.493 ; 4.493 ; Rise       ; Clock           ;
+;  IR_output[14]  ; Clock      ; 4.474 ; 4.474 ; Rise       ; Clock           ;
+;  IR_output[15]  ; Clock      ; 4.230 ; 4.230 ; Rise       ; Clock           ;
+;  IR_output[16]  ; Clock      ; 4.422 ; 4.422 ; Rise       ; Clock           ;
+;  IR_output[17]  ; Clock      ; 4.268 ; 4.268 ; Rise       ; Clock           ;
+;  IR_output[18]  ; Clock      ; 4.345 ; 4.345 ; Rise       ; Clock           ;
+;  IR_output[19]  ; Clock      ; 3.941 ; 3.941 ; Rise       ; Clock           ;
+;  IR_output[20]  ; Clock      ; 4.344 ; 4.344 ; Rise       ; Clock           ;
+;  IR_output[21]  ; Clock      ; 4.268 ; 4.268 ; Rise       ; Clock           ;
+;  IR_output[22]  ; Clock      ; 4.391 ; 4.391 ; Rise       ; Clock           ;
+;  IR_output[23]  ; Clock      ; 4.187 ; 4.187 ; Rise       ; Clock           ;
+; N_output        ; Clock      ; 4.694 ; 4.694 ; Rise       ; Clock           ;
+; RA_output43[*]  ; Clock      ; 4.136 ; 4.136 ; Rise       ; Clock           ;
+;  RA_output43[0] ; Clock      ; 4.136 ; 4.136 ; Rise       ; Clock           ;
+; ZERO_output     ; Clock      ; 4.674 ; 4.674 ; Rise       ; Clock           ;
+; b_inv           ; Clock      ; 4.468 ; 4.468 ; Rise       ; Clock           ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -159.060  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  Clock           ; -159.060  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -5556.61  ; 0.0   ; 0.0      ; 0.0     ; -74.951             ;
+;  Clock           ; -5556.610 ; 0.000 ; N/A      ; N/A     ; -74.951             ;
++------------------+-----------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------------+
+; Setup Times                                                                   ;
++---------------+------------+---------+---------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise    ; Fall    ; Clock Edge ; Clock Reference ;
++---------------+------------+---------+---------+------------+-----------------+
+; IR_input[*]   ; Clock      ; 4.867   ; 4.867   ; Rise       ; Clock           ;
+;  IR_input[0]  ; Clock      ; 4.389   ; 4.389   ; Rise       ; Clock           ;
+;  IR_input[1]  ; Clock      ; 4.667   ; 4.667   ; Rise       ; Clock           ;
+;  IR_input[2]  ; Clock      ; 4.596   ; 4.596   ; Rise       ; Clock           ;
+;  IR_input[3]  ; Clock      ; 4.672   ; 4.672   ; Rise       ; Clock           ;
+;  IR_input[4]  ; Clock      ; 4.262   ; 4.262   ; Rise       ; Clock           ;
+;  IR_input[5]  ; Clock      ; 3.790   ; 3.790   ; Rise       ; Clock           ;
+;  IR_input[6]  ; Clock      ; 4.120   ; 4.120   ; Rise       ; Clock           ;
+;  IR_input[7]  ; Clock      ; 4.304   ; 4.304   ; Rise       ; Clock           ;
+;  IR_input[8]  ; Clock      ; 4.129   ; 4.129   ; Rise       ; Clock           ;
+;  IR_input[9]  ; Clock      ; 3.893   ; 3.893   ; Rise       ; Clock           ;
+;  IR_input[10] ; Clock      ; 4.867   ; 4.867   ; Rise       ; Clock           ;
+;  IR_input[11] ; Clock      ; 3.900   ; 3.900   ; Rise       ; Clock           ;
+;  IR_input[12] ; Clock      ; 4.531   ; 4.531   ; Rise       ; Clock           ;
+;  IR_input[13] ; Clock      ; 4.165   ; 4.165   ; Rise       ; Clock           ;
+;  IR_input[14] ; Clock      ; 4.538   ; 4.538   ; Rise       ; Clock           ;
+;  IR_input[15] ; Clock      ; 4.344   ; 4.344   ; Rise       ; Clock           ;
+;  IR_input[16] ; Clock      ; 4.309   ; 4.309   ; Rise       ; Clock           ;
+;  IR_input[17] ; Clock      ; 4.209   ; 4.209   ; Rise       ; Clock           ;
+;  IR_input[18] ; Clock      ; 4.125   ; 4.125   ; Rise       ; Clock           ;
+;  IR_input[19] ; Clock      ; 3.946   ; 3.946   ; Rise       ; Clock           ;
+;  IR_input[20] ; Clock      ; 4.007   ; 4.007   ; Rise       ; Clock           ;
+;  IR_input[21] ; Clock      ; 4.458   ; 4.458   ; Rise       ; Clock           ;
+;  IR_input[22] ; Clock      ; 3.947   ; 3.947   ; Rise       ; Clock           ;
+;  IR_input[23] ; Clock      ; 3.983   ; 3.983   ; Rise       ; Clock           ;
+; Reset         ; Clock      ; 159.285 ; 159.285 ; Rise       ; Clock           ;
++---------------+------------+---------+---------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; IR_input[*]   ; Clock      ; -1.610 ; -1.610 ; Rise       ; Clock           ;
+;  IR_input[0]  ; Clock      ; -1.916 ; -1.916 ; Rise       ; Clock           ;
+;  IR_input[1]  ; Clock      ; -2.064 ; -2.064 ; Rise       ; Clock           ;
+;  IR_input[2]  ; Clock      ; -2.018 ; -2.018 ; Rise       ; Clock           ;
+;  IR_input[3]  ; Clock      ; -2.049 ; -2.049 ; Rise       ; Clock           ;
+;  IR_input[4]  ; Clock      ; -1.803 ; -1.803 ; Rise       ; Clock           ;
+;  IR_input[5]  ; Clock      ; -1.610 ; -1.610 ; Rise       ; Clock           ;
+;  IR_input[6]  ; Clock      ; -1.786 ; -1.786 ; Rise       ; Clock           ;
+;  IR_input[7]  ; Clock      ; -1.835 ; -1.835 ; Rise       ; Clock           ;
+;  IR_input[8]  ; Clock      ; -1.813 ; -1.813 ; Rise       ; Clock           ;
+;  IR_input[9]  ; Clock      ; -1.675 ; -1.675 ; Rise       ; Clock           ;
+;  IR_input[10] ; Clock      ; -2.135 ; -2.135 ; Rise       ; Clock           ;
+;  IR_input[11] ; Clock      ; -1.688 ; -1.688 ; Rise       ; Clock           ;
+;  IR_input[12] ; Clock      ; -1.977 ; -1.977 ; Rise       ; Clock           ;
+;  IR_input[13] ; Clock      ; -1.826 ; -1.826 ; Rise       ; Clock           ;
+;  IR_input[14] ; Clock      ; -1.962 ; -1.962 ; Rise       ; Clock           ;
+;  IR_input[15] ; Clock      ; -1.855 ; -1.855 ; Rise       ; Clock           ;
+;  IR_input[16] ; Clock      ; -1.832 ; -1.832 ; Rise       ; Clock           ;
+;  IR_input[17] ; Clock      ; -1.786 ; -1.786 ; Rise       ; Clock           ;
+;  IR_input[18] ; Clock      ; -1.758 ; -1.758 ; Rise       ; Clock           ;
+;  IR_input[19] ; Clock      ; -1.705 ; -1.705 ; Rise       ; Clock           ;
+;  IR_input[20] ; Clock      ; -1.746 ; -1.746 ; Rise       ; Clock           ;
+;  IR_input[21] ; Clock      ; -1.944 ; -1.944 ; Rise       ; Clock           ;
+;  IR_input[22] ; Clock      ; -1.685 ; -1.685 ; Rise       ; Clock           ;
+;  IR_input[23] ; Clock      ; -1.736 ; -1.736 ; Rise       ; Clock           ;
+; Reset         ; Clock      ; -0.727 ; -0.727 ; Rise       ; Clock           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; ALU_OP[*]       ; Clock      ; 8.938 ; 8.938 ; Rise       ; Clock           ;
+;  ALU_OP[0]      ; Clock      ; 7.996 ; 7.996 ; Rise       ; Clock           ;
+;  ALU_OP[1]      ; Clock      ; 8.938 ; 8.938 ; Rise       ; Clock           ;
+; IR_output[*]    ; Clock      ; 8.924 ; 8.924 ; Rise       ; Clock           ;
+;  IR_output[0]   ; Clock      ; 7.663 ; 7.663 ; Rise       ; Clock           ;
+;  IR_output[1]   ; Clock      ; 8.670 ; 8.670 ; Rise       ; Clock           ;
+;  IR_output[2]   ; Clock      ; 7.968 ; 7.968 ; Rise       ; Clock           ;
+;  IR_output[3]   ; Clock      ; 7.383 ; 7.383 ; Rise       ; Clock           ;
+;  IR_output[4]   ; Clock      ; 7.636 ; 7.636 ; Rise       ; Clock           ;
+;  IR_output[5]   ; Clock      ; 7.575 ; 7.575 ; Rise       ; Clock           ;
+;  IR_output[6]   ; Clock      ; 7.615 ; 7.615 ; Rise       ; Clock           ;
+;  IR_output[7]   ; Clock      ; 7.562 ; 7.562 ; Rise       ; Clock           ;
+;  IR_output[8]   ; Clock      ; 7.948 ; 7.948 ; Rise       ; Clock           ;
+;  IR_output[9]   ; Clock      ; 8.229 ; 8.229 ; Rise       ; Clock           ;
+;  IR_output[10]  ; Clock      ; 7.957 ; 7.957 ; Rise       ; Clock           ;
+;  IR_output[11]  ; Clock      ; 7.960 ; 7.960 ; Rise       ; Clock           ;
+;  IR_output[12]  ; Clock      ; 7.952 ; 7.952 ; Rise       ; Clock           ;
+;  IR_output[13]  ; Clock      ; 8.405 ; 8.405 ; Rise       ; Clock           ;
+;  IR_output[14]  ; Clock      ; 8.924 ; 8.924 ; Rise       ; Clock           ;
+;  IR_output[15]  ; Clock      ; 8.229 ; 8.229 ; Rise       ; Clock           ;
+;  IR_output[16]  ; Clock      ; 8.508 ; 8.508 ; Rise       ; Clock           ;
+;  IR_output[17]  ; Clock      ; 8.037 ; 8.037 ; Rise       ; Clock           ;
+;  IR_output[18]  ; Clock      ; 8.348 ; 8.348 ; Rise       ; Clock           ;
+;  IR_output[19]  ; Clock      ; 7.351 ; 7.351 ; Rise       ; Clock           ;
+;  IR_output[20]  ; Clock      ; 8.293 ; 8.293 ; Rise       ; Clock           ;
+;  IR_output[21]  ; Clock      ; 8.038 ; 8.038 ; Rise       ; Clock           ;
+;  IR_output[22]  ; Clock      ; 8.384 ; 8.384 ; Rise       ; Clock           ;
+;  IR_output[23]  ; Clock      ; 8.169 ; 8.169 ; Rise       ; Clock           ;
+; N_output        ; Clock      ; 9.175 ; 9.175 ; Rise       ; Clock           ;
+; RA_output43[*]  ; Clock      ; 8.392 ; 8.392 ; Rise       ; Clock           ;
+;  RA_output43[0] ; Clock      ; 8.392 ; 8.392 ; Rise       ; Clock           ;
+; ZERO_output     ; Clock      ; 9.155 ; 9.155 ; Rise       ; Clock           ;
+; b_inv           ; Clock      ; 8.603 ; 8.603 ; Rise       ; Clock           ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; ALU_OP[*]       ; Clock      ; 4.193 ; 4.193 ; Rise       ; Clock           ;
+;  ALU_OP[0]      ; Clock      ; 4.193 ; 4.193 ; Rise       ; Clock           ;
+;  ALU_OP[1]      ; Clock      ; 4.615 ; 4.615 ; Rise       ; Clock           ;
+; IR_output[*]    ; Clock      ; 3.941 ; 3.941 ; Rise       ; Clock           ;
+;  IR_output[0]   ; Clock      ; 3.998 ; 3.998 ; Rise       ; Clock           ;
+;  IR_output[1]   ; Clock      ; 4.501 ; 4.501 ; Rise       ; Clock           ;
+;  IR_output[2]   ; Clock      ; 4.115 ; 4.115 ; Rise       ; Clock           ;
+;  IR_output[3]   ; Clock      ; 4.003 ; 4.003 ; Rise       ; Clock           ;
+;  IR_output[4]   ; Clock      ; 3.997 ; 3.997 ; Rise       ; Clock           ;
+;  IR_output[5]   ; Clock      ; 4.117 ; 4.117 ; Rise       ; Clock           ;
+;  IR_output[6]   ; Clock      ; 3.982 ; 3.982 ; Rise       ; Clock           ;
+;  IR_output[7]   ; Clock      ; 4.025 ; 4.025 ; Rise       ; Clock           ;
+;  IR_output[8]   ; Clock      ; 4.213 ; 4.213 ; Rise       ; Clock           ;
+;  IR_output[9]   ; Clock      ; 4.376 ; 4.376 ; Rise       ; Clock           ;
+;  IR_output[10]  ; Clock      ; 4.217 ; 4.217 ; Rise       ; Clock           ;
+;  IR_output[11]  ; Clock      ; 4.221 ; 4.221 ; Rise       ; Clock           ;
+;  IR_output[12]  ; Clock      ; 4.214 ; 4.214 ; Rise       ; Clock           ;
+;  IR_output[13]  ; Clock      ; 4.493 ; 4.493 ; Rise       ; Clock           ;
+;  IR_output[14]  ; Clock      ; 4.474 ; 4.474 ; Rise       ; Clock           ;
+;  IR_output[15]  ; Clock      ; 4.230 ; 4.230 ; Rise       ; Clock           ;
+;  IR_output[16]  ; Clock      ; 4.422 ; 4.422 ; Rise       ; Clock           ;
+;  IR_output[17]  ; Clock      ; 4.268 ; 4.268 ; Rise       ; Clock           ;
+;  IR_output[18]  ; Clock      ; 4.345 ; 4.345 ; Rise       ; Clock           ;
+;  IR_output[19]  ; Clock      ; 3.941 ; 3.941 ; Rise       ; Clock           ;
+;  IR_output[20]  ; Clock      ; 4.344 ; 4.344 ; Rise       ; Clock           ;
+;  IR_output[21]  ; Clock      ; 4.268 ; 4.268 ; Rise       ; Clock           ;
+;  IR_output[22]  ; Clock      ; 4.391 ; 4.391 ; Rise       ; Clock           ;
+;  IR_output[23]  ; Clock      ; 4.187 ; 4.187 ; Rise       ; Clock           ;
+; N_output        ; Clock      ; 4.694 ; 4.694 ; Rise       ; Clock           ;
+; RA_output43[*]  ; Clock      ; 4.136 ; 4.136 ; Rise       ; Clock           ;
+;  RA_output43[0] ; Clock      ; 4.136 ; 4.136 ; Rise       ; Clock           ;
+; ZERO_output     ; Clock      ; 4.674 ; 4.674 ; Rise       ; Clock           ;
+; b_inv           ; Clock      ; 4.468 ; 4.468 ; Rise       ; Clock           ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Transfers                                                       ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; Clock      ; Clock    ; > 2147483647 ; 0        ; 0        ; 0        ;
++------------+----------+--------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Hold Transfers                                                        ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; Clock      ; Clock    ; > 2147483647 ; 0        ; 0        ; 0        ;
++------------+----------+--------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 25    ; 25   ;
+; Unconstrained Input Port Paths  ; 84    ; 84   ;
+; Unconstrained Output Ports      ; 30    ; 30   ;
+; Unconstrained Output Port Paths ; 33    ; 33   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+    Info: Processing started: Thu Apr 03 16:55:27 2014
+Info: Command: quartus_sta ProjectMid -c ProjectMid
+Info: qsta_default_script.tcl version: #1
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Critical Warning: Synopsys Design Constraints File file not found: 'ProjectMid.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name Clock Clock
+Info: Analyzing Slow Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -159.060
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:  -159.060     -5556.610 Clock 
+Info: Worst-case hold slack is 0.445
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.445         0.000 Clock 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.631
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.631       -74.951 Clock 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info: Started post-fitting delay annotation
+Warning: Found 128 output pins without output pin load capacitance assignment
+    Info: Pin "C_output" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "V_output" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ZERO_output" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "N_output" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "a_inv" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "b_inv" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ALU_OP[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ALU_OP[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[23]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[22]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[21]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[20]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[19]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[18]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[17]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[16]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IR_output[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output42[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RA_output43[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RB_output[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RM_output[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "RZ_output[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info: Delay annotation completed successfully
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -61.626
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:   -61.626     -2142.873 Clock 
+Info: Worst-case hold slack is 0.215
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.215         0.000 Clock 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.380
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.380       -61.380 Clock 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 367 megabytes
+    Info: Processing ended: Thu Apr 03 16:55:56 2014
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:15
+
+

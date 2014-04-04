@@ -1,0 +1,10 @@
+transcript on
+if {[file exists gate_work]} {
+	vdel -lib gate_work -all
+}
+vlib gate_work
+vmap work gate_work
+
+vcom -93 -work work {ProjectMid.vho}
+
+do "Z:/CSCE 230/Project230/ProjectMid.do"

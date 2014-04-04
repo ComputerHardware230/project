@@ -1,0 +1,43 @@
+Quartus II Archive log --	C:/Temp/Project230/Group13_Part2.qarlog
+
+Archive:	C:/Temp/Project230/Group13_Part2.qar
+Date:		Thu Apr 03 18:13:43 2014
+Quartus II 64-Bit		9.1 Build 350 03/24/2010 SP 2 SJ Full Version
+
+	=========== Files Selected: ===========
+C:/Temp/Project230/16bitfulladder.bdf
+C:/Temp/Project230/16bitmux4to1.tdf
+C:/Temp/Project230/2to1_16mux.tdf
+C:/Temp/Project230/3to1_16mux.tdf
+C:/Temp/Project230/4bitfulladder.bdf
+C:/Temp/Project230/ProjectMid.bdf
+C:/Temp/Project230/ProjectMid.do
+C:/Temp/Project230/ProjectMid.qpf
+C:/Temp/Project230/ProjectMid.qsf
+C:/Temp/Project230/ProjectMid_assignment_defaults.qdf
+C:/Temp/Project230/alu.bdf
+C:/Temp/Project230/and16.vhd
+C:/Temp/Project230/anotherconstant1.vhd
+C:/Temp/Project230/assignment_defaults.qdf
+C:/Temp/Project230/block1.bdf
+C:/Temp/Project230/const1.tdf
+C:/Temp/Project230/constantzero.tdf
+C:/Temp/Project230/controlunit.vhd
+C:/Temp/Project230/decoder16.vhd
+C:/Temp/Project230/immediate.vhd
+C:/Temp/Project230/mux16.vhd
+C:/Temp/Project230/newmux.tdf
+C:/Temp/Project230/not16.vhd
+C:/Temp/Project230/or16.vhd
+C:/Temp/Project230/reg16.vhd
+C:/Temp/Project230/reg16NoEnable.vhd
+C:/Temp/Project230/reg24.vhd
+C:/Temp/Project230/reg4.vhd
+C:/Temp/Project230/registers.bdf
+C:/Temp/Project230/registersnewtype.bdf
+C:/Temp/Project230/xor16.vhd
+C:/Temp/Project230/zeroconstant16bitswide.vhd
+	======= Total: 32 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
