@@ -1,0 +1,124 @@
+Restore Archived Project report for ProjectMid
+Tue Apr 08 01:13:02 2014
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Tue Apr 08 01:13:02 2014 ;
+; Revision Name                   ; ProjectMid                            ;
+; Top-level Entity Name           ; ProjectMid                            ;
+; Family                          ; Cyclone II                            ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored '//psf/Home/Desktop/project/Project230_v3_p3.qar' into the '//psf/Home/Desktop/project/Project230_v3_p3_restored/' directory
+Info: Generated report 'ProjectMid.restore.rpt'
+Info: Evaluation of Tcl script c:/altera/91/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 129 megabytes
+    Info: Processing ended: Tue Apr 08 01:13:02 2014
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------+
+; Files Restored                     ;
++------------------------------------+
+; File Name                          ;
++------------------------------------+
+; 16bitfulladder.bdf                 ;
+; 16bitmux4to1.tdf                   ;
+; 2to1_16mux.tdf                     ;
+; 3to1_16mux.tdf                     ;
+; 4bitfulladder.bdf                  ;
+; Adder.vhd                          ;
+; CMUX.bsf                           ;
+; CMUX.inc                           ;
+; CMUX.qip                           ;
+; CMUX.tdf                           ;
+; Const.vhd                          ;
+; InstructionAddressGenerator.bdf    ;
+; InstructionAdressGenerator.bdf     ;
+; MainMemory.vhd                     ;
+; MemoryInterface.bdf                ;
+; MuxINC.vhd                         ;
+; MuxPC.vhd                          ;
+; PC.vhd                             ;
+; PC_Temp.vhd                        ;
+; ProjectMid.bdf                     ;
+; ProjectMid.do                      ;
+; ProjectMid.qpf                     ;
+; ProjectMid.qsf                     ;
+; ProjectMid_assignment_defaults.qdf ;
+; alu.bdf                            ;
+; and16.vhd                          ;
+; anotherconstant1.vhd               ;
+; assignment_defaults.qdf            ;
+; block1.bdf                         ;
+; const1.tdf                         ;
+; constant4_16bits.bsf               ;
+; constant4_16bits.inc               ;
+; constant4_16bits.qip               ;
+; constant4_16bits.tdf               ;
+; constantzero.tdf                   ;
+; controlunit.vhd                    ;
+; decoder16.vhd                      ;
+; immediate.vhd                      ;
+; memoryinitialization.mif           ;
+; mux16.vhd                          ;
+; newmux.tdf                         ;
+; not16.vhd                          ;
+; or16.vhd                           ;
+; reg16.vhd                          ;
+; reg16NoEnable.vhd                  ;
+; reg24.vhd                          ;
+; reg4.vhd                           ;
+; registers.bdf                      ;
+; registersnewtype.bdf               ;
+; xor16.vhd                          ;
+; zeroconstant16bitswide.vhd         ;
++------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+
